@@ -8,4 +8,11 @@ data:
   SPRING_PROFILES_ACTIVE: {{ .Values.global.activeProfile }}
   SPRING_CONFIG_IMPORT: {{ .Values.global.configServerURL }}
   EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: {{ .Values.global.eurekaServerURL }}
+  ACCOUNTS_DATASOURCE_URL: {{ .Values.global.accountsDatasourceUrl}}
+  CARPARKETL_DATASOURCE_URL: {{ .Values.global.carParkEtlDataSourceUrl}}
+  CARPARKS_DATASOURCE_URL: {{ .Values.global.carParkDataSourceUrl}}
+  BOOKINGS_DATASOURCE_URL: {{ .Values.global.bookingDataSourceUrl}}
+  CARPARK_DB: {{ .Values.global.carParkDb}}
+  CARPARK_USER: {{ .Values.global.carParkUser}}
+  CARPARK_PASS: {{ .Values.global.carparkPassword}}
 {{- end -}}

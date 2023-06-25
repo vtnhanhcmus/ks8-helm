@@ -1,0 +1,23 @@
+deploymentName: carpark-etl-deployment
+deploymentLabel: carpark-etl
+appName: carparketl
+
+replicaCount: 1
+
+image:
+  repository: vtnhanhcmus/carpark-etl
+  tag: latest
+
+containerPort: 9000
+
+service:
+  type: NodePort
+  port: 9000
+  targetPort: 9000
+
+config_enabled: true
+zipkin_enabled: true
+profile_enabled: true
+eureka_enabled: true
+appname_enabled: true
+carparketl_db_enabled: true

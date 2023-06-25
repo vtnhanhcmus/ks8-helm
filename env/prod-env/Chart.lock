@@ -11,5 +11,20 @@ dependencies:
 - name: carpark-eurekaserver
   repository: file://../../carpark-eurekaserver
   version: 0.1.0
-digest: sha256:43442b6061eb707b43b231fe2faee663397e52e218958d162904cfe700c9ad5e
-generated: "2023-06-25T14:16:15.56272+08:00"
+- name: carpark-db
+  repository: file://../../carpark-db
+  version: 0.1.0
+- name: carpark-account
+  repository: file://../../carpark-account
+  version: 0.1.0
+- name: carpark-booking
+  repository: file://../../carpark-booking
+  version: 0.1.0
+- name: carpark-carpark-etl
+  repository: file://../../carpark-carpark-etl
+  version: 0.1.0
+- name: carpark-carparks
+  repository: file://../../carpark-carparks
+  version: 0.1.0
+digest: sha256:cd5a86d3940550f9534433fb44042e48af1eee0a225198fe431c8400ee8184a9
+generated: "2023-06-25T18:47:52.786621+08:00"

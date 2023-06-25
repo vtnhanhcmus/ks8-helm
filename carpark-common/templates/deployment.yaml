@@ -54,4 +54,63 @@ spec:
               name: {{ .Values.global.configMapName }}
               key: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
         {{- end }}
+
+        {{- if .Values.carpark_db_enabled }}
+        
+        - name: POSTGRES_DB
+          valueFrom: 
+            configMapKeyRef:
+              name: {{ .Values.global.configMapName }}
+              key: CARPARK_DB
+
+        - name: POSTGRES_USER
+          valueFrom: 
+            configMapKeyRef:
+              name: {{ .Values.global.configMapName }}
+              key: CARPARK_USER
+
+        - name: POSTGRES_PASS
+          valueFrom: 
+            configMapKeyRef:
+              name: {{ .Values.global.configMapName }}
+              key: CARPARK_PASS
+
+        {{- end }}
+
+
+        {{- if .Values.account_db_enabled }}
+        - name: SPRING_DATASOURCE_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: {{ .Values.global.configMapName }}
+              key: ACCOUNTS_DATASOURCE_URL
+
+        {{- end }}
+
+        {{- if .Values.booking_db_enabled }}
+        - name: SPRING_DATASOURCE_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: {{ .Values.global.configMapName }}
+              key: BOOKINGS_DATASOURCE_URL
+        {{- end }}
+
+        {{- if .Values.carparketl_db_enabled }}
+        - name: SPRING_DATASOURCE_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: {{ .Values.global.configMapName }}
+              key: CARPARKETL_DATASOURCE_URL
+        {{- end }}
+
+        {{- if .Values.carparks_db_enabled }}
+        - name: SPRING_DATASOURCE_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: {{ .Values.global.configMapName }}
+              key: CARPARKS_DATASOURCE_URL
+        {{- end }}
+
+
+
 {{- end -}}

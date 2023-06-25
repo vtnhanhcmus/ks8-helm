@@ -1,0 +1,23 @@
+deploymentName: carparks-deployment
+deploymentLabel: carparks
+appName: carparks
+
+replicaCount: 1
+
+image:
+  repository: vtnhanhcmus/carparks
+  tag: latest
+
+containerPort: 4000
+
+service:
+  type: NodePort
+  port: 4000
+  targetPort: 4000
+
+config_enabled: true
+zipkin_enabled: true
+profile_enabled: true
+eureka_enabled: true
+appname_enabled: true
+carparks_db_enabled: true
