@@ -1,0 +1,15 @@
+dependencies:
+- name: carpark-common
+  repository: file://../../carpark-common
+  version: 0.1.0
+- name: carpark-configserver
+  repository: file://../../carpark-configserver
+  version: 0.1.0
+- name: carpark-zipkin
+  repository: file://../../carpark-zipkin
+  version: 0.1.0
+- name: carpark-eurekaserver
+  repository: file://../../carpark-eurekaserver
+  version: 0.1.0
+digest: sha256:43442b6061eb707b43b231fe2faee663397e52e218958d162904cfe700c9ad5e
+generated: "2023-06-25T14:16:15.56272+08:00"
