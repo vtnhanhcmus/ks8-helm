@@ -1,0 +1,6 @@
+dependencies:
+- name: carpark-common
+  repository: file://../carpark-common
+  version: 0.1.0
+digest: sha256:5200458b25fdeb1dc72a087ce804fb5b44aa49691b79174a6e6257c009311119
+generated: "2024-06-14T15:01:45.944176+08:00"
